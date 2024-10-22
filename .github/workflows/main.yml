@@ -3,7 +3,7 @@ name: Ollama Code Review
 # 상단에 환경 변수 설정
 env:
   # 서버 설정
-  OLLAMA_IP: "10.11.10.83"
+  OLLAMA_URL: "https://6961-221-147-80-129.ngrok-free.app/api/generate" 
   OLLAMA_MODEL: "llama2:3b"
   REQUEST_TIMEOUT: 600  # 타임아웃 시간(초)
   
@@ -84,13 +84,12 @@ jobs:
         from pathlib import Path
 
         # 환경 변수에서 설정 가져오기
-        OLLAMA_IP = os.environ['OLLAMA_IP']
+        OLLAMA_URL = os.environ['OLLAMA_URL']  # 직접 전체 URL 사용
         OLLAMA_MODEL = os.environ['OLLAMA_MODEL']
         FILE_EXTENSIONS = os.environ['FILE_EXTENSIONS'].split(',')
         REQUEST_TIMEOUT = int(os.environ['REQUEST_TIMEOUT'])
         REVIEW_ASPECTS = os.environ['REVIEW_ASPECTS']
         REVIEW_FORMAT = os.environ['REVIEW_FORMAT']
-        OLLAMA_URL = f"http://{OLLAMA_IP}:11434/api/generate"
         
         print(f"Starting code review with timeout: {REQUEST_TIMEOUT} seconds")
         
