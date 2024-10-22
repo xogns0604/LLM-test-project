@@ -12,32 +12,23 @@ env:
   
   # 리뷰 프롬프트 설정 - 실제 사용할 간단한 프롬프트
   REVIEW_ASPECTS: |
-    Please only review if the class name is appropriate for its purpose.
-    Response should be a single sentence either approving or suggesting a better name.
+    1. Code quality and Java best practices
+    2. Potential bugs or logical errors
+    3. Performance considerations
+    4. Clean code principles
+    5. Design patterns usage
+    6. Security concerns
+    7. 답변은 한글로
   
-  # 원래 프롬프트 (주석처리)
-  # REVIEW_ASPECTS: |
-  #   1. Code quality and Java best practices
-  #   2. Potential bugs or logical errors
-  #   3. Performance considerations
-  #   4. Clean code principles
-  #   5. Design patterns usage
-  #   6. Security concerns
-  
-  # 간단한 포맷
   REVIEW_FORMAT: |
-    Class name review: [Your one-sentence response]
-  
-  # 원래 포맷 (주석처리)
-  # REVIEW_FORMAT: |
-  #   ## Summary
-  #   [Brief overview of the code]
-  #   
-  #   ## Key Findings
-  #   [Main points and issues]
-  #   
-  #   ## Recommendations
-  #   [Specific suggestions for improvement]
+    ## Summary
+    [Brief overview of the code]
+    
+    ## Key Findings
+    [Main points and issues]
+    
+    ## Recommendations
+    [Specific suggestions for improvement]
 
 on:
   pull_request:
