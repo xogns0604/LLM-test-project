@@ -105,7 +105,9 @@ jobs:
                 
                 # Ollama에 리뷰 요청
                 prompt = f"""
-                Please review this Java code and provide feedback in Korean language:
+                전체 리뷰를 한국어로만 작성해주세요. 영어나 한자는 사용하지 말고 순수 한글로만 작성해주세요.
+                (단, 코드 내의 변수명이나 메서드명 등 코드 관련 용어는 예외입니다)
+                
                 File: {file_path}
                 
                 ```java
