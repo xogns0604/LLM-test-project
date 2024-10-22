@@ -4,7 +4,7 @@ name: Ollama Code Review
 env:
   # 서버 설정
   OLLAMA_URL: "https://b30e-221-147-80-129.ngrok-free.app/api/generate" 
-  OLLAMA_MODEL: "llama2:3b"
+  OLLAMA_MODEL: "llama3.2:3b"
   REQUEST_TIMEOUT: 600  # 타임아웃 시간(초)
   
   # 파일 설정
