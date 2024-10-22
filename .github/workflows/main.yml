@@ -131,12 +131,18 @@ jobs:
                 
                 try:
                     print(f"Sending request to Ollama for {file_path}")
+                    headers = {
+                        'Content-Type': 'application/json',
+                        'ngrok-skip-browser-warning': 'true'  # ngrok 브라우저 경고 스킵
+                    }
                     response = requests.post(OLLAMA_URL, 
+                        headers=headers,  # 헤더 추가
                         json={
                             "model": OLLAMA_MODEL,
                             "prompt": prompt,
                             "stream": False
-                        }, timeout=REQUEST_TIMEOUT)
+                        }, 
+                        timeout=REQUEST_TIMEOUT)
                     
                     if response.status_code == 200:
                         review_result = response.json()
