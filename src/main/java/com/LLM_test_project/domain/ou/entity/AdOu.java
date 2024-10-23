@@ -1,4 +1,4 @@
-package com.LLM_test_project.domain.Ou.entity;
+package com.LLM_test_project.domain.ou.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
