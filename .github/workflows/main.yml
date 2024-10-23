@@ -2,7 +2,7 @@ name: GroqCloud Code Review
 
 env:
   # 서버 설정
-  GROQ_API_URL: "https://api.groq.com/v1/chat/completions"  # URL 수정
+  GROQ_API_URL: "https://api.groq.com/openai/v1/chat/completions"  # URL 수정
   GROQ_MODEL: "mixtral-8x7b-32768"
   REQUEST_TIMEOUT: 600
   
